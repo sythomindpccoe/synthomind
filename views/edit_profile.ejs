@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile | HackTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="dashboard.html" class="logo">Hack<span>Track</span></a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hackathon.html">Current Hackathon</a></li>
+                <li><a href="previous-hackathons.html">Past Hackathons</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <button class="login-btn" id="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-container">
+        <section class="profile-header">
+            <h1><i class="fas fa-user-edit"></i> Edit Profile</h1>
+            <p>Update your personal information and preferences</p>
+        </section>
+
+        <div class="profile-grid">
+            <!-- Personal Information Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-id-card"></i> Personal Information</h2>
+                </div>
+                <div class="card-content">
+                    <form id="personal-info-form">
+                        <div class="form-group">
+                            <label for="profile-name">Full Name</label>
+                            <input type="text" id="profile-name" value="Alex Morgan" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-email">Email</label>
+                            <input type="email" id="profile-email" value="alex.morgan@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-bio">Bio</label>
+                            <textarea id="profile-bio" rows="4">Team lead and full stack developer with 5 years of experience in building web applications.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="profile-role">Role</label>
+                            <select id="profile-role">
+                                <option value="developer">Developer</option>
+                                <option value="designer">Designer</option>
+                                <option value="researcher">Researcher</option>
+                                <option value="manager" selected>Team Lead</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Profile Picture Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-camera"></i> Profile Picture</h2>
+                </div>
+                <div class="card-content">
+                    <div class="avatar-upload">
+                        <div class="avatar-preview">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Current Profile" id="avatar-preview">
+                        </div>
+                        <div class="avatar-upload-controls">
+                            <input type="file" id="avatar-upload" accept="image/*">
+                            <label for="avatar-upload" class="upload-btn">
+                                <i class="fas fa-cloud-upload-alt"></i> Choose Image
+                            </label>
+                            <button class="remove-btn" id="remove-avatar">
+                                <i class="fas fa-trash-alt"></i> Remove
+                            </button>
+                            <small class="hint">JPG or PNG, max 2MB</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Media Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-share-alt"></i> Social Media</h2>
+                </div>
+                <div class="card-content">
+                    <form id="social-media-form">
+                        <div class="form-group">
+                            <label><i class="fab fa-github"></i> GitHub</label>
+                            <input type="url" placeholder="https://github.com/username" value="https://github.com/alexmorgan">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fab fa-linkedin"></i> LinkedIn</label>
+                            <input type="url" placeholder="https://linkedin.com/in/username" value="https://linkedin.com/in/alexmorgan">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fab fa-twitter"></i> Twitter</label>
+                            <input type="url" placeholder="https://twitter.com/username" value="https://twitter.com/alexmorgan">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-globe"></i> Website</label>
+                            <input type="url" placeholder="https://yourwebsite.com" value="https://alexmorgan.dev">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Save Links</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-code"></i> Skills</h2>
+                </div>
+                <div class="card-content">
+                    <form id="skills-form">
+                        <div class="form-group">
+                            <label>Add Skills</label>
+                            <div class="skills-input-container">
+                                <input type="text" id="new-skill" placeholder="Type a skill and press Enter">
+                                <button type="button" id="add-skill-btn"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="skills-tags" id="skills-tags">
+                                <span class="skill-tag">JavaScript <button class="remove-skill"><i class="fas fa-times"></i></button></span>
+                                <span class="skill-tag">React <button class="remove-skill"><i class="fas fa-times"></i></button></span>
+                                <span class="skill-tag">Node.js <button class="remove-skill"><i class="fas fa-times"></i></button></span>
+                                <span class="skill-tag">Project Management <button class="remove-skill"><i class="fas fa-times"></i></button></span>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Save Skills</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Change Password Section -->
+            <section class="profile-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-lock"></i> Change Password</h2>
+                </div>
+                <div class="card-content">
+                    <form id="password-form">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" required>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Change Password</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Danger Zone Section -->
+            <section class="profile-card danger-zone">
+                <div class="card-header">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Danger Zone</h2>
+                </div>
+                <div class="card-content">
+                    <div class="danger-actions">
+                        <button class="danger-btn" id="deactivate-account">
+                            <i class="fas fa-user-slash"></i> Deactivate Account
+                        </button>
+                        <button class="danger-btn" id="delete-account">
+                            <i class="fas fa-trash-alt"></i> Delete Account
+                        </button>
+                    </div>
+                    <p class="warning-text"><i class="fas fa-exclamation-circle"></i> These actions are irreversible. Proceed with caution.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Confirm Action</h2>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Are you sure you want to perform this action?</p>
+                <div class="modal-actions">
+                    <button class="cancel-btn" id="modal-cancel">Cancel</button>
+                    <button class="danger-btn" id="modal-confirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/edit_profile.js"></script>
+</body>
+</html>

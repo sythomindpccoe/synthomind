@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Hackathons | HackTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="dashboard.html" class="logo">Hack<span>Track</span></a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hackathon.html">Current Hackathon</a></li>
+                <li><a href="previous-hackathons.html" class="active">Past Hackathons</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <button class="login-btn" id="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="hackathons-container">
+        <section class="hackathons-header">
+            <h1><i class="fas fa-history"></i> Past Hackathons</h1>
+            <p>Review your previous hackathon projects and achievements</p>
+            
+            <div class="filter-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="hackathon-search" placeholder="Search hackathons...">
+                </div>
+                <div class="filter-dropdown">
+                    <select id="hackathon-filter">
+                        <option value="all">All Hackathons</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="winner">Winning Projects</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <div class="hackathons-grid">
+            <!-- Hackathon Card 1 -->
+            <div class="hackathon-card winner">
+                <div class="hackathon-badge">
+                    <i class="fas fa-trophy"></i> Winner
+                </div>
+                <div class="hackathon-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                </div>
+                <div class="hackathon-content">
+                    <h3>Global AI Hackathon 2023</h3>
+                    <div class="hackathon-meta">
+                        <span><i class="fas fa-calendar-alt"></i> May 15-20, 2023</span>
+                        <span><i class="fas fa-users"></i> Team: Code Crushers</span>
+                    </div>
+                    <p class="hackathon-description">
+                        Developed an AI-powered recommendation engine for personalized learning paths in STEM education.
+                    </p>
+                    <div class="hackathon-resources">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-alt"></i> Documentation
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                    <div class="hackathon-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">1st</span>
+                            <span class="stat-label">Place</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">150+</span>
+                            <span class="stat-label">Teams</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">$10K</span>
+                            <span class="stat-label">Prize</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hackathon Card 2 -->
+            <div class="hackathon-card">
+                <div class="hackathon-image" style="background-image: url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');">
+                </div>
+                <div class="hackathon-content">
+                    <h3>Blockchain Innovation Challenge 2022</h3>
+                    <div class="hackathon-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Nov 10-15, 2022</span>
+                        <span><i class="fas fa-users"></i> Team: Chain Reactors</span>
+                    </div>
+                    <p class="hackathon-description">
+                        Created a decentralized identity verification system for educational credentials using Ethereum.
+                    </p>
+                    <div class="hackathon-resources">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-alt"></i> Documentation
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-award"></i> Finalist
+                        </a>
+                    </div>
+                    <div class="hackathon-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">Top 5</span>
+                            <span class="stat-label">Finalist</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">80+</span>
+                            <span class="stat-label">Teams</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">$5K</span>
+                            <span class="stat-label">Prize</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hackathon Card 3 -->
+            <div class="hackathon-card">
+                <div class="hackathon-image" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80');">
+                </div>
+                <div class="hackathon-content">
+                    <h3>Web3 Developer Hackathon 2022</h3>
+                    <div class="hackathon-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Aug 5-7, 2022</span>
+                        <span><i class="fas fa-users"></i> Team: Web Warriors</span>
+                    </div>
+                    <p class="hackathon-description">
+                        Built a decentralized content monetization platform for creators using smart contracts.
+                    </p>
+                    <div class="hackathon-resources">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-alt"></i> Documentation
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-lightbulb"></i> Innovation Award
+                        </a>
+                    </div>
+                    <div class="hackathon-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">2nd</span>
+                            <span class="stat-label">Place</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">120+</span>
+                            <span class="stat-label">Teams</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">$7.5K</span>
+                            <span class="stat-label">Prize</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hackathon Card 4 -->
+            <div class="hackathon-card">
+                <div class="hackathon-image" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80');">
+                </div>
+                <div class="hackathon-content">
+                    <h3>Climate Tech Hackathon 2021</h3>
+                    <div class="hackathon-meta">
+                        <span><i class="fas fa-calendar-alt"></i> Apr 22-25, 2021</span>
+                        <span><i class="fas fa-users"></i> Team: Green Coders</span>
+                    </div>
+                    <p class="hackathon-description">
+                        Designed an IoT-based system for monitoring urban air quality with real-time data visualization.
+                    </p>
+                    <div class="hackathon-resources">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-alt"></i> Documentation
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-leaf"></i> Sustainability Award
+                        </a>
+                    </div>
+                    <div class="hackathon-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">Top 10</span>
+                            <span class="stat-label">Finalist</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">200+</span>
+                            <span class="stat-label">Teams</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">$3K</span>
+                            <span class="stat-label">Prize</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="page-btn disabled"><i class="fas fa-chevron-left"></i></button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </main>
+
+    <script src="/js/past_hackathon.js"></script>
+</body>
+</html>

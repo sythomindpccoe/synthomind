@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Hackathon | HackTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="dashboard.html" class="logo">Hack<span>Track</span></a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hackathon.html" class="active">Current Hackathon</a></li>
+                <li><a href="previous-hackathons.html">Past Hackathons</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <button class="login-btn" id="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="hackathon-container">
+        <!-- Hackathon Header -->
+        <section class="hackathon-header">
+            <div class="hackathon-banner" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                <div class="banner-overlay">
+                    <h1>Tech Innovators 2023</h1>
+                    <p class="hackathon-theme">"Building the Future with AI and Blockchain"</p>
+                    <div class="hackathon-meta">
+                        <span class="meta-item"><i class="fas fa-calendar-alt"></i> Oct 20-28, 2023</span>
+                        <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Virtual & San Francisco, CA</span>
+                        <span class="meta-item"><i class="fas fa-users"></i> Team: Code Crushers</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hackathon-progress">
+                <div class="progress-info">
+                    <span class="progress-label">Hackathon Progress</span>
+                    <span class="progress-percent">65% Complete</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%;"></div>
+                </div>
+                <div class="time-remaining">
+                    <i class="fas fa-clock"></i> 5 days 12 hours remaining
+                </div>
+            </div>
+        </section>
+
+        <!-- Hackathon Tabs -->
+        <div class="hackathon-tabs">
+            <button class="tab-btn active" data-tab="overview">Overview</button>
+            <button class="tab-btn" data-tab="documentation">Documentation</button>
+            <button class="tab-btn" data-tab="resources">Resources</button>
+            <button class="tab-btn" data-tab="team">Team</button>
+            <button class="tab-btn" data-tab="submission">Submission</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="overview-tab">
+            <section class="hackathon-section">
+                <h2><i class="fas fa-info-circle"></i> About the Hackathon</h2>
+                <div class="section-content">
+                    <p>Tech Innovators 2023 is one of the most prestigious hackathons in the tech industry, bringing together developers, designers, and entrepreneurs to build innovative solutions using cutting-edge technologies like AI and Blockchain. This year's theme focuses on creating tools that will shape the future of digital interaction.</p>
+                    
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <h3><i class="fas fa-trophy"></i> Prizes</h3>
+                            <ul>
+                                <li>1st Place: $50,000 + Mentorship</li>
+                                <li>2nd Place: $25,000 + AWS Credits</li>
+                                <li>3rd Place: $10,000 + Tools Package</li>
+                                <li>Best AI Project: Special Prize</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h3><i class="fas fa-list-check"></i> Requirements</h3>
+                            <ul>
+                                <li>Must use at least one AI/Blockchain component</li>
+                                <li>Working prototype required</li>
+                                <li>5-minute presentation</li>
+                                <li>Code must be open source</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h3><i class="fas fa-calendar-days"></i> Schedule</h3>
+                            <ul>
+                                <li>Oct 20: Kickoff & Team Formation</li>
+                                <li>Oct 21-25: Development Period</li>
+                                <li>Oct 26: Midpoint Check-in</li>
+                                <li>Oct 27: Final Submissions</li>
+                                <li>Oct 28: Judging & Awards</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h3><i class="fas fa-gavel"></i> Judging Criteria</h3>
+                            <ul>
+                                <li>Innovation (30%)</li>
+                                <li>Technical Complexity (25%)</li>
+                                <li>Design & UX (20%)</li>
+                                <li>Potential Impact (25%)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hackathon-section">
+                <h2><i class="fas fa-lightbulb"></i> Project Idea</h2>
+                <div class="section-content">
+                    <h3 class="project-title">Decentralized AI Content Moderator</h3>
+                    <p class="project-description">We're building a decentralized platform that uses AI to moderate online content while preserving user privacy. The system will use blockchain to ensure transparency in moderation decisions and allow community governance.</p>
+                    
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>AI-powered content analysis</li>
+                            <li>Transparent moderation logs on blockchain</li>
+                            <li>Community voting system</li>
+                            <li>Privacy-preserving design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-status">
+                        <h4>Current Status:</h4>
+                        <div class="status-items">
+                            <div class="status-item">
+                                <span class="status-label">Backend API</span>
+                                <div class="status-bar">
+                                    <div class="status-fill" style="width: 80%;"></div>
+                                </div>
+                                <span class="status-percent">80%</span>
+                            </div>
+                            
+                            <div class="status-item">
+                                <span class="status-label">Frontend UI</span>
+                                <div class="status-bar">
+                                    <div class="status-fill" style="width: 60%;"></div>
+                                </div>
+                                <span class="status-percent">60%</span>
+                            </div>
+                            
+                            <div class="status-item">
+                                <span class="status-label">AI Model</span>
+                                <div class="status-bar">
+                                    <div class="status-fill" style="width: 75%;"></div>
+                                </div>
+                                <span class="status-percent">75%</span>
+                            </div>
+                            
+                            <div class="status-item">
+                                <span class="status-label">Blockchain Integration</span>
+                                <div class="status-bar">
+                                    <div class="status-fill" style="width: 50%;"></div>
+                                </div>
+                                <span class="status-percent">50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="documentation-tab">
+            <section class="hackathon-section">
+                <h2><i class="fas fa-file-alt"></i> Project Documentation</h2>
+                <div class="section-content">
+                    <div class="docs-actions">
+                        <button class="add-doc-btn" id="add-doc-btn">
+                            <i class="fas fa-plus"></i> Add Document
+                        </button>
+                        <div class="search-docs">
+                            <input type="text" placeholder="Search documents...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-list">
+                        <!-- Document Item -->
+                        <div class="doc-item">
+                            <div class="doc-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3>Project Requirements</h3>
+                                <p class="doc-meta">Last updated 2 days ago by Sarah</p>
+                                <p class="doc-description">Detailed requirements and specifications for the project</p>
+                            </div>
+                            <div class="doc-actions">
+                                <button class="doc-action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Item -->
+                        <div class="doc-item">
+                            <div class="doc-icon">
+                                <i class="fas fa-file-code"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3>API Documentation</h3>
+                                <p class="doc-meta">Last updated yesterday by David</p>
+                                <p class="doc-description">Endpoints, request/response formats, and examples</p>
+                            </div>
+                            <div class="doc-actions">
+                                <button class="doc-action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Item -->
+                        <div class="doc-item">
+                            <div class="doc-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3>Research Findings</h3>
+                                <p class="doc-meta">Last updated 3 hours ago by Mike</p>
+                                <p class="doc-description">Market research and technical feasibility analysis</p>
+                            </div>
+                            <div class="doc-actions">
+                                <button class="doc-action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Item -->
+                        <div class="doc-item">
+                            <div class="doc-icon">
+                                <i class="fas fa-file-image"></i>
+                            </div>
+                            <div class="doc-info">
+                                <h3>UI Mockups</h3>
+                                <p class="doc-meta">Last updated today by Priya</p>
+                                <p class="doc-description">Figma designs for all application screens</p>
+                            </div>
+                            <div class="doc-actions">
+                                <button class="doc-action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="doc-action-btn" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="resources-tab">
+            <section class="hackathon-section">
+                <h2><i class="fas fa-book"></i> Research Papers</h2>
+                <div class="section-content">
+                    <div class="resources-list">
+                        <!-- Resource Item -->
+                        <div class="resource-item">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-info">
+                                <h3>Advances in AI Content Moderation</h3>
+                                <p class="resource-meta">Published in IEEE 2022 | 15 pages</p>
+                                <p class="resource-description">Recent developments in machine learning approaches to content moderation</p>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="resource-action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="resource-action-btn" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Resource Item -->
+                        <div class="resource-item">
+                            <div class="resource-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="resource-info">
+                                <h3>Blockchain for Transparent Systems</h3>
+                                <p class="resource-meta">Published in ACM 2021 | 22 pages</p>
+                                <p class="resource-description">Using blockchain technology to create auditable and transparent systems</p>
+                            </div>
+                            <div class="resource-actions">
+                                <button class="resource-action-btn" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="resource-action-btn" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hackathon-section">
+                <h2><i class="fas fa-code"></i> Code Resources</h2>
+                <div class="section-content">
+                    <div class="code-resources">
+                        <div class="code-repo">
+                            <h3><i class="fab fa-github"></i> GitHub Repository</h3>
+                            <p class="repo-link">github.com/code-crushers/ai-moderation</p>
+                            <div class="repo-stats">
+                                <span class="repo-stat"><i class="fas fa-code-branch"></i> 12 commits</span>
+                                <span class="repo-stat"><i class="fas fa-user"></i> 5 contributors</span>
+                                <span class="repo-stat"><i class="fas fa-exclamation-circle"></i> 3 issues</span>
+                            </div>
+                            <button class="repo-btn">
+                                <i class="fas fa-external-link-alt"></i> Open Repository
+                            </button>
+                        </div>
+                        
+                        <div class="code-snippets">
+                            <h3><i class="fas fa-code"></i> Useful Code Snippets</h3>
+                            <div class="snippet-item">
+                                <h4>Blockchain Transaction</h4>
+                                <pre><code>function createModerationRecord(contentHash, decision) {
+    const tx = {
+        contentHash,
+        decision,
+        timestamp: Date.now(),
+        moderator: currentUser
+    };
+    blockchain.addTransaction(tx);
+}</code></pre>
+                                <p class="snippet-meta">Added by Alex | Solidity</p>
+                            </div>
+                            
+                            <div class="snippet-item">
+                                <h4>AI Classification</h4>
+                                <pre><code>async function classifyContent(text) {
+    const response = await model.predict({
+        inputs: text,
+    });
+    return {
+        toxicity: response[0].toxic,
+        severity: response[0].severity
+    };
+}</code></pre>
+                                <p class="snippet-meta">Added by Mike | Python</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="team-tab">
+            <section class="hackathon-section">
+                <h2><i class="fas fa-users"></i> Team Members</h2>
+                <div class="section-content">
+                    <div class="team-members">
+                        <!-- Team Member -->
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="member-avatar">
+                            <div class="member-info">
+                                <h3>Sarah Johnson</h3>
+                                <p class="member-role">Backend Developer</p>
+                                <p class="member-bio">Responsible for API development and database architecture</p>
+                                <div class="member-contribution">
+                                    <h4>Current Tasks:</h4>
+                                    <ul>
+                                        <li>Payment gateway integration</li>
+                                        <li>API documentation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-contact">
+                                <a href="#" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                <a href="#" class="contact-link"><i class="fas fa-comment-dots"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member -->
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike" class="member-avatar">
+                            <div class="member-info">
+                                <h3>Mike Chen</h3>
+                                <p class="member-role">ML Engineer</p>
+                                <p class="member-bio">Developing the AI models for content analysis</p>
+                                <div class="member-contribution">
+                                    <h4>Current Tasks:</h4>
+                                    <ul>
+                                        <li>Model optimization</li>
+                                        <li>Training data collection</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-contact">
+                                <a href="#" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                <a href="#" class="contact-link"><i class="fas fa-comment-dots"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member -->
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya" class="member-avatar">
+                            <div class="member-info">
+                                <h3>Priya Patel</h3>
+                                <p class="member-role">UI/UX Designer</p>
+                                <p class="member-bio">Creating the user interface and experience design</p>
+                                <div class="member-contribution">
+                                    <h4>Current Tasks:</h4>
+                                    <ul>
+                                        <li>Finalizing UI mockups</li>
+                                        <li>User testing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-contact">
+                                <a href="#" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                <a href="#" class="contact-link"><i class="fas fa-comment-dots"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member -->
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David" class="member-avatar">
+                            <div class="member-info">
+                                <h3>David Kim</h3>
+                                <p class="member-role">Frontend Developer</p>
+                                <p class="member-bio">Implementing the user interface and client-side logic</p>
+                                <div class="member-contribution">
+                                    <h4>Current Tasks:</h4>
+                                    <ul>
+                                        <li>Dashboard implementation</li>
+                                        <li>API integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-contact">
+                                <a href="#" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                <a href="#" class="contact-link"><i class="fas fa-comment-dots"></i></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Member -->
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Alex" class="member-avatar">
+                            <div class="member-info">
+                                <h3>Alex Morgan</h3>
+                                <p class="member-role">Team Lead</p>
+                                <p class="member-bio">Coordinating the project and handling blockchain integration</p>
+                                <div class="member-contribution">
+                                    <h4>Current Tasks:</h4>
+                                    <ul>
+                                        <li>Project management</li>
+                                        <li>Blockchain integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="member-contact">
+                                <a href="#" class="contact-link"><i class="fas fa-envelope"></i></a>
+                                <a href="#" class="contact-link"><i class="fas fa-comment-dots"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hackathon-section">
+                <h2><i class="fas fa-comments"></i> Team Communication</h2>
+                <div class="section-content">
+                    <div class="communication-channels">
+                        <div class="channel-card">
+                            <div class="channel-header">
+                                <i class="fab fa-slack"></i>
+                                <h3>Slack</h3>
+                            </div>
+                            <p>Primary communication channel for the team</p>
+                            <button class="channel-btn">
+                                <i class="fas fa-external-link-alt"></i> Open Channel
+                            </button>
+                        </div>
+                        
+                        <div class="channel-card">
+                            <div class="channel-header">
+                                <i class="fas fa-video"></i>
+                                <h3>Zoom</h3>
+                            </div>
+                            <p>Daily standup meetings at 10 AM PST</p>
+                            <button class="channel-btn">
+                                <i class="fas fa-external-link-alt"></i> Join Meeting
+                            </button>
+                        </div>
+                        
+                        <div class="channel-card">
+                            <div class="channel-header">
+                                <i class="fab fa-discord"></i>
+                                <h3>Discord</h3>
+                            </div>
+                            <p>Casual communication and quick questions</p>
+                            <button class="channel-btn">
+                                <i class="fas fa-external-link-alt"></i> Join Server
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="submission-tab">
+            <section class="hackathon-section">
+                <h2><i class="fas fa-upload"></i> Submission Requirements</h2>
+                <div class="section-content">
+                    <div class="requirements-list">
+                        <div class="requirement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Working prototype or demo (video acceptable)</p>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>GitHub repository with all source code</p>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>5-minute presentation (slides optional)</p>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Documentation explaining your solution</p>
+                        </div>
+                        <div class="requirement-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Team information and roles</p>
+                        </div>
+                    </div>
+                    
+                    <div class="submission-checklist">
+                        <h3>Submission Checklist</h3>
+                        <div class="checklist-items">
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>Prototype completed</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" checked>
+                                <span>GitHub repository ready</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>Presentation prepared</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span>Documentation written</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" checked>
+                                <span>Team info submitted</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hackathon-section">
+                <h2><i class="fas fa-paper-plane"></i> Submit Project</h2>
+                <div class="section-content">
+                    <div class="submission-form">
+                        <div class="form-group">
+                            <label for="project-name">Project Name</label>
+                            <input type="text" id="project-name" value="Decentralized AI Content Moderator">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-desc">Short Description (200 chars max)</label>
+                            <textarea id="project-desc" rows="3">A decentralized platform that uses AI to moderate online content while preserving user privacy, with transparent moderation logs on blockchain.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-repo">GitHub Repository URL</label>
+                            <input type="url" id="project-repo" value="https://github.com/code-crushers/ai-moderation">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-video">Demo Video URL (optional)</label>
+                            <input type="url" id="project-video" placeholder="https://youtube.com/...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Presentation Slides (optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="project-slides">
+                                <label for="project-slides" class="upload-btn">
+                                    <i class="fas fa-cloud-upload-alt"></i> Choose File
+                                </label>
+                                <span class="file-names">No file selected</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="save-btn">Save Draft</button>
+                            <button class="submit-btn">Submit Project</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Add Document Modal -->
+    <div class="modal" id="doc-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Add New Document</h2>
+            </div>
+            <div class="modal-body">
+                <form id="doc-form">
+                    <div class="form-group">
+                        <label for="doc-title">Document Title</label>
+                        <input type="text" id="doc-title" placeholder="Enter document title">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doc-type">Document Type</label>
+                        <select id="doc-type">
+                            <option value="requirements">Requirements</option>
+                            <option value="design">Design</option>
+                            <option value="api">API Documentation</option>
+                            <option value="research">Research</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="doc-content">Content (optional)</label>
+                        <textarea id="doc-content" rows="5" placeholder="Enter document content or description"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Upload File</label>
+                        <div class="file-upload">
+                            <input type="file" id="doc-file">
+                            <label for="doc-file" class="upload-btn">
+                                <i class="fas fa-cloud-upload-alt"></i> Choose File
+                            </label>
+                            <span class="file-names">No file selected</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit" class="submit-btn">Add Document</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/hackathon.js"></script>
+</body>
+</html>

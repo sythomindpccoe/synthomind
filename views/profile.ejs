@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | HackTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="dashboard.html" class="logo">Syntho<span>Mind</span></a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hackathon.html">Current Hackathon</a></li>
+                <li><a href="previous-hackathons.html">Past Hackathons</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+            <button class="login-btn" id="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-container">
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="profile-avatar-container">
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Alex Morgan" class="profile-avatar">
+                <button class="edit-avatar-btn" id="edit-avatar-btn">
+                    <i class="fas fa-camera"></i>
+                </button>
+            </div>
+            <div class="profile-info">
+                <h1>Alex Morgan</h1>
+                <p class="profile-title">Team Lead & Full Stack Developer</p>
+                <p class="profile-location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Hackathons</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Wins</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Ongoing</span>
+                    </div>
+                </div>
+                
+                <div class="profile-actions">
+                    <button class="edit-profile-btn" id="edit-profile-btn">
+                        <i class="fas fa-user-edit"></i> Edit Profile
+                    </button>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Tabs -->
+        <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="about">About</button>
+            <button class="tab-btn" data-tab="skills">Skills</button>
+            <button class="tab-btn" data-tab="projects">Projects</button>
+            <button class="tab-btn" data-tab="achievements">Achievements</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content active" id="about-tab">
+            <section class="profile-section">
+                <h2><i class="fas fa-user"></i> Bio</h2>
+                <div class="section-content">
+                    <p>Passionate full-stack developer with 5 years of experience in building web applications. Specialized in JavaScript frameworks and cloud architecture. Love participating in hackathons and solving real-world problems with technology.</p>
+                </div>
+            </section>
+
+            <section class="profile-section">
+                <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                <div class="section-content">
+                    <div class="timeline">
+                        <!-- Experience Item -->
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Senior Software Engineer (2021 - Present)</h3>
+                                <p class="company">TechSolutions Inc.</p>
+                                <p>Leading a team of developers to build scalable web applications. Responsible for architecture decisions and mentoring junior developers.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience Item -->
+                        <div class="timeline-item">
+                            <div class="timeline-date"></div>
+                            <div class="timeline-content">
+                                <h3>Software Developer (2018 - 2021)</h3>
+                                <p class="company">Digital Innovations </p>
+                                <p>Developed and maintained multiple client projects using React, Node.js, and MongoDB stack.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-section">
+                <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="section-content">
+                    <div class="timeline">
+                        <!-- Education Item -->
+                        <div class="timeline-item">
+                           
+                            <div class="timeline-content">
+                                <h3>B.S. in Computer Science (2014 - 2018)</h3>
+                                <p class="company">Stanford University</p>
+                                <p>Specialized in Artificial Intelligence and Web Technologies. Graduated with honors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="skills-tab">
+            <section class="profile-section">
+                <h2><i class="fas fa-code"></i> Technical Skills</h2>
+                <div class="section-content">
+                    <div class="skills-grid">
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-section">
+                <h2><i class="fas fa-language"></i> Languages</h2>
+                <div class="section-content">
+                    <div class="skills-grid">
+                        <!-- Language Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">English</span>
+                                <span class="skill-level">Native</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Language Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Spanish</span>
+                                <span class="skill-level">Fluent</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Language Item -->
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">French</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="projects-tab">
+            <section class="profile-section">
+                <h2><i class="fas fa-project-diagram"></i> Personal Projects</h2>
+                <div class="section-content">
+                    <div class="projects-grid">
+                        <!-- Project Item -->
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Data Visualization Dashboard</h3>
+                                <p class="project-description">Interactive dashboard for visualizing large datasets with React and D3.js</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">D3.js</span>
+                                    <span class="tech-tag">Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Item -->
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80');">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>AI-Powered Chat App</h3>
+                                <p class="project-description">Real-time chat application with AI moderation features</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Firebase</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Item -->
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Portfolio Generator</h3>
+                                <p class="project-description">Tool for developers to automatically generate portfolio websites</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                    <span class="tech-tag">GraphQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-section">
+                <h2><i class="fas fa-trophy"></i> Hackathon Projects</h2>
+                <div class="section-content">
+                    <div class="projects-grid">
+                        <!-- Hackathon Project Item -->
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                                <div class="hackathon-badge">1st Place</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>HealthTrack</h3>
+                                <p class="project-description">AI-powered health monitoring system - Winner of TechCrunch Disrupt 2022</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">TensorFlow</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hackathon Project Item -->
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                                <div class="hackathon-badge">2nd Place</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>EduConnect</h3>
+                                <p class="project-description">Platform connecting students with tutors globally - Hack the North 2021</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">WebRTC</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-content" id="achievements-tab">
+            <section class="profile-section">
+                <h2><i class="fas fa-award"></i> Awards & Certifications</h2>
+                <div class="section-content">
+                    <div class="achievements-list">
+                        <!-- Achievement Item -->
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3>1st Place - TechCrunch Disrupt 2022</h3>
+                                <p class="achievement-date">October 2022</p>
+                                <p class="achievement-description">Won first place in the HealthTech category for developing an AI-powered health monitoring system.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Item -->
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3>AWS Certified Solutions Architect</h3>
+                                <p class="achievement-date">June 2021</p>
+                                <p class="achievement-description">Professional certification demonstrating technical expertise in designing distributed systems on AWS.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Item -->
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3>2nd Place - Hack the North 2021</h3>
+                                <p class="achievement-date">September 2021</p>
+                                <p class="achievement-description">Second place in North America's largest hackathon for creating an education platform.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Achievement Item -->
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h3>Google Cloud Professional Data Engineer</h3>
+                                <p class="achievement-date">March 2020</p>
+                                <p class="achievement-description">Certification for designing and building data processing systems on Google Cloud.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-section">
+                <h2><i class="fas fa-medal"></i> Badges</h2>
+                <div class="section-content">
+                    <div class="badges-grid">
+                        <!-- Badge Item -->
+                        <div class="badge-item">
+                            <div class="badge-icon" style="background-color: #FFD700;">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Code Master</h3>
+                            <p>10,000+ lines of code</p>
+                        </div>
+                        
+                        <!-- Badge Item -->
+                        <div class="badge-item">
+                            <div class="badge-icon" style="background-color: #4CAF50;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Team Player</h3>
+                            <p>5+ team projects</p>
+                        </div>
+                        
+                        <!-- Badge Item -->
+                        <div class="badge-item">
+                            <div class="badge-icon" style="background-color: #2196F3;">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Innovator</h3>
+                            <p>3 patented ideas</p>
+                        </div>
+                        
+                        <!-- Badge Item -->
+                        <div class="badge-item">
+                            <div class="badge-icon" style="background-color: #9C27B0;">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h3>Fast Learner</h3>
+                            <p>Mastered 5+ new techs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Edit Avatar Modal -->
+    <div class="modal" id="avatar-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Update Profile Picture</h2>
+            </div>
+            <div class="modal-body">
+                <div class="avatar-upload">
+                    <div class="avatar-preview" id="avatar-preview">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Current Avatar">
+                    </div>
+                    <div class="upload-options">
+                        <input type="file" id="avatar-input" accept="image/*">
+                        <label for="avatar-input" class="upload-btn">
+                            <i class="fas fa-cloud-upload-alt"></i> Choose Image
+                        </label>
+                        <button class="remove-btn" id="remove-avatar-btn">
+                            <i class="fas fa-trash"></i> Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button class="cancel-btn" id="cancel-avatar-btn">Cancel</button>
+                    <button class="save-btn" id="save-avatar-btn">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/profile.js"></script>
+</body>
+</html>

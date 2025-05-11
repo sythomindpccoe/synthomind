@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Dashboard | HackTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a class="logo">Syntho<span>Mind</span></a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a id="Current_Hackathon">Current Hackathon</a></li>
+                <li><a id="Past_Hackathons">Past Hackathons</a></li>
+                <li><a id="profile">Profile</a></li>
+            </ul>
+            <button class="login-btn" id="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome back, <span id="username">Alex</span>!</h1>
+                <p>Here's what's happening with your team today.</p>
+                <div class="current-hackathon">
+                    <h3>Current Hackathon: <span>Tech Innovators 2023</span></h3>
+                    <p>Days remaining: <strong>5</strong> | Team: <strong>Code Crushers</strong></p>
+                </div>
+            </div>
+            <div class="quick-actions">
+                <button class="quick-btn" id="new-project-btn">
+                    <i class="fas fa-plus-circle"></i> New Project
+                </button>
+                <button class="quick-btn" id="daily-update-btn">
+                    <i class="fas fa-plus"></i> Daily Update
+                </button>
+                <button class="quick-btn" id="view-hackathon-btn">
+                    <i class="fas fa-code"></i> View Hackathon
+                </button>
+                <button class="quick-btn" id="edit-profile-btn">
+                    <i class="fas fa-user-edit"></i> Edit Profile
+                </button>
+            </div>
+        </section>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Current Hackathon Section -->
+            <section class="dashboard-card current-hackathon-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-code-branch"></i> Current Hackathon</h2>
+                    <a id="View_Details" class="view-all">View Details <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card-content">
+                    <h3>Tech Innovators 2023</h3>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 65%;">
+                            <span>65% Complete</span>
+                        </div>
+                    </div>
+                    <div class="hackathon-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Ends: Oct 28, 2023</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <span>Team: 5 members</span>
+                        </div>
+                    </div>
+                    <div class="resource-links">
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-file-alt"></i> Documentation
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fab fa-github"></i> Code Repository
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-book"></i> Research Papers
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Updates Section -->
+            <section class="dashboard-card team-updates-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-bullhorn"></i> Team Updates</h2>
+                    <button id="add-update-btn">Add Update <i class="fas fa-plus"></i></button>
+                </div>
+                <div class="card-content">
+                    <div class="updates-list">
+                        <!-- Update Item -->
+                        <div class="update-item">
+                            <div class="update-header">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="update-avatar">
+                                <div class="update-meta">
+                                    <span class="update-author">Sarah Johnson</span>
+                                    <span class="update-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="update-content">
+                                <p>Finished the API integration for the user authentication module. Will share the documentation shortly.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Update Item -->
+                        <div class="update-item">
+                            <div class="update-header">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike" class="update-avatar">
+                                <div class="update-meta">
+                                    <span class="update-author">Mike Chen</span>
+                                    <span class="update-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="update-content">
+                                <p>Found some great research papers on ML model optimization that might help with our project. Added them to the resources folder.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Update Item -->
+                        <div class="update-item">
+                            <div class="update-header">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya" class="update-avatar">
+                                <div class="update-meta">
+                                    <span class="update-author">Priya Patel</span>
+                                    <span class="update-time">Yesterday</span>
+                                </div>
+                            </div>
+                            <div class="update-content">
+                                <p>Working on the UI redesign based on feedback. Should have mockups ready for review by tomorrow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Members Section -->
+            <section class="dashboard-card team-members-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-users"></i> Team Members</h2>
+                    <span class="team-count">5 Members</span>
+                </div>
+                <div class="card-content">
+                    <div class="members-list">
+                        <!-- Member Item -->
+                        <div class="member-item">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah" class="member-avatar">
+                            <div class="member-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Backend Developer</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Python</span>
+                                </div>
+                            </div>
+                            <a href="#" class="member-contact">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Member Item -->
+                        <div class="member-item">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike" class="member-avatar">
+                            <div class="member-info">
+                                <h4>Mike Chen</h4>
+                                <p>ML Engineer</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">TensorFlow</span>
+                                </div>
+                            </div>
+                            <a href="#" class="member-contact">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Member Item -->
+                        <div class="member-item">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya" class="member-avatar">
+                            <div class="member-info">
+                                <h4>Priya Patel</h4>
+                                <p>UI/UX Designer</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Figma</span>
+                                    <span class="skill-tag">CSS</span>
+                                </div>
+                            </div>
+                            <a href="#" class="member-contact">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Member Item -->
+                        <div class="member-item">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David" class="member-avatar">
+                            <div class="member-info">
+                                <h4>David Kim</h4>
+                                <p>Frontend Developer</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                </div>
+                            </div>
+                            <a href="#" class="member-contact">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Member Item -->
+                        <div class="member-item">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Alex" class="member-avatar">
+                            <div class="member-info">
+                                <h4>Alex Morgan</h4>
+                                <p>Team Lead</p>
+                                <div class="member-skills">
+                                    <span class="skill-tag">Project Mgmt</span>
+                                    <span class="skill-tag">Full Stack</span>
+                                </div>
+                            </div>
+                            <a href="#" class="member-contact">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Documents Section -->
+            <section class="dashboard-card documents-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-file-alt"></i> Recent Documents</h2>
+                    <a href="hackathon.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="card-content">
+                    <div class="documents-list">
+                        <!-- Document Item -->
+                        <div class="document-item">
+                            <div class="document-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Project Requirements.pdf</h4>
+                                <p>Updated 2 days ago by Sarah</p>
+                            </div>
+                            <div class="document-actions">
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Item -->
+                        <div class="document-item">
+                            <div class="document-icon">
+                                <i class="fas fa-file-code"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>API Documentation.md</h4>
+                                <p>Updated yesterday by David</p>
+                            </div>
+                            <div class="document-actions">
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Item -->
+                        <div class="document-item">
+                            <div class="document-icon">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>Research Findings.docx</h4>
+                                <p>Updated 3 hours ago by Mike</p>
+                            </div>
+                            <div class="document-actions">
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Document Item -->
+                        <div class="document-item">
+                            <div class="document-icon">
+                                <i class="fas fa-file-image"></i>
+                            </div>
+                            <div class="document-info">
+                                <h4>UI Mockups.fig</h4>
+                                <p>Updated today by Priya</p>
+                            </div>
+                            <div class="document-actions">
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="doc-action-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Tasks Section -->
+            <section class="dashboard-card tasks-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-tasks"></i> Upcoming Tasks</h2>
+                    <button id="add-task-btn">Add Task <i class="fas fa-plus"></i></button>
+                </div>
+                <div class="card-content">
+                    <div class="tasks-list">
+                        <!-- Task Item -->
+                        <div class="task-item">
+                            <div class="task-checkbox">
+                                <input type="checkbox" id="task1">
+                                <label for="task1"></label>
+                            </div>
+                            <div class="task-info">
+                                <h4>Integrate payment gateway</h4>
+                                <p>Due: Tomorrow | Assigned: Sarah</p>
+                            </div>
+                            <div class="task-priority high"></div>
+                        </div>
+                        
+                        <!-- Task Item -->
+                        <div class="task-item">
+                            <div class="task-checkbox">
+                                <input type="checkbox" id="task2">
+                                <label for="task2"></label>
+                            </div>
+                            <div class="task-info">
+                                <h4>Optimize ML model</h4>
+                                <p>Due: Oct 25 | Assigned: Mike</p>
+                            </div>
+                            <div class="task-priority medium"></div>
+                        </div>
+                        
+                        <!-- Task Item -->
+                        <div class="task-item">
+                            <div class="task-checkbox">
+                                <input type="checkbox" id="task3">
+                                <label for="task3"></label>
+                            </div>
+                            <div class="task-info">
+                                <h4>Finalize UI design</h4>
+                                <p>Due: Oct 24 | Assigned: Priya</p>
+                            </div>
+                            <div class="task-priority high"></div>
+                        </div>
+                        
+                        <!-- Task Item -->
+                        <div class="task-item">
+                            <div class="task-checkbox">
+                                <input type="checkbox" id="task4">
+                                <label for="task4"></label>
+                            </div>
+                            <div class="task-info">
+                                <h4>Write unit tests</h4>
+                                <p>Due: Oct 26 | Assigned: David</p>
+                            </div>
+                            <div class="task-priority low"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity Section -->
+            <section class="dashboard-card activity-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-history"></i> Recent Activity</h2>
+                </div>
+                <div class="card-content">
+                    <div class="activity-timeline">
+                        <!-- Activity Item -->
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-code-commit"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>David</strong> pushed to <strong>main</strong> branch</p>
+                                <small>2 hours ago</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity Item -->
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-file-upload"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Mike</strong> uploaded research papers</p>
+                                <small>5 hours ago</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity Item -->
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Sarah</strong> commented on API docs</p>
+                                <small>Yesterday</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity Item -->
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Priya</strong> created a new branch <strong>feature/ui-redesign</strong></p>
+                                <small>Yesterday</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Activity Item -->
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p><strong>Alex</strong> completed task <strong>Project setup</strong></p>
+                                <small>2 days ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Add Update Modal -->
+    <div class="modal" id="update-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Add Daily Update</h2>
+            </div>
+            <div class="modal-body">
+                <form id="update-form">
+                    <div class="form-group">
+                        <label for="update-content">What did you work on today?</label>
+                        <textarea id="update-content" rows="5" placeholder="Share your progress with the team..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Attachments (optional)</label>
+                        <div class="file-upload">
+                            <input type="file" id="update-files" multiple>
+                            <label for="update-files" class="upload-btn">
+                                <i class="fas fa-cloud-upload-alt"></i> Choose Files
+                            </label>
+                            <span class="file-names">No files selected</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Post Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div class="modal" id="task-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Add New Task</h2>
+            </div>
+            <div class="modal-body">
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Task Title</label>
+                        <input type="text" id="task-title" placeholder="Enter task title">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-description">Description</label>
+                        <textarea id="task-description" rows="3" placeholder="Enter task description"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="task-due">Due Date</label>
+                            <input type="date" id="task-due">
+                        </div>
+                        <div class="form-group">
+                            <label for="task-assign">Assign To</label>
+                            <select id="task-assign">
+                                <option value="alex">Alex Morgan</option>
+                                <option value="sarah">Sarah Johnson</option>
+                                <option value="mike">Mike Chen</option>
+                                <option value="priya">Priya Patel</option>
+                                <option value="david">David Kim</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-priority">Priority</label>
+                        <div class="priority-options">
+                            <label class="priority-option">
+                                <input type="radio" name="priority" value="low" checked>
+                                <span class="priority-tag low">Low</span>
+                            </label>
+                            <label class="priority-option">
+                                <input type="radio" name="priority" value="medium">
+                                <span class="priority-tag medium">Medium</span>
+                            </label>
+                            <label class="priority-option">
+                                <input type="radio" name="priority" value="high">
+                                <span class="priority-tag high">High</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Add Task</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
