@@ -57,24 +57,44 @@ function updateSelectedMembers() {
 }
 
 // Update form submission to get selected members
-projectForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+// projectForm.addEventListener('submit', function(e) {
+//     e.preventDefault();
     
-    const selectedMembers = Array.from(memberCheckboxes)
-        .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.value);
+//     const selectedMembers = Array.from(memberCheckboxes)
+//         .filter(checkbox => checkbox.checked)
+//         .map(checkbox => checkbox.value);
     
-    const projectData = {
-        name: document.getElementById('project-name').value,
-        description: document.getElementById('project-description').value,
-        startDate: document.getElementById('project-start').value,
-        endDate: document.getElementById('project-end').value,
-        team: selectedMembers, // Updated to use checkbox values
-        type: document.querySelector('input[name="project-type"]:checked').value,
-        repo: document.getElementById('project-repo').value
-    };
+//     const projectData = {
+//         name: document.getElementById('project-name').value,
+//         description: document.getElementById('project-description').value,
+//         startDate: document.getElementById('project-start').value,
+//         endDate: document.getElementById('project-end').value,
+//         team: selectedMembers, // Updated to use checkbox values
+//         type: document.querySelector('input[name="project-type"]:checked').value,
+//         repo: document.getElementById('project-repo').value
+//     };
     
-    console.log('New project data:', projectData);
-    alert('Project created successfully!');
-    window.location.href = 'dashboard.html';
+//     console.log('New project data:', projectData);
+//     alert('Project created successfully!');
+//     window.location.href = 'dashboard.html';
+// });
+
+
+
+document.getElementById('dashboard').addEventListener('click',()=>{
+    window.location.href = '/dashboard';
 });
+
+document.getElementById('hackathon').addEventListener('click',()=>{
+    window.location.href = '/hackathon';
+});
+
+document.getElementById('past_hackathon').addEventListener('click',()=>{
+    window.location.href = '/past_hackathon';
+});
+
+document.getElementById('profile').addEventListener('click',()=>{
+    window.location.href = '/profile';
+});
+
+

@@ -15,35 +15,25 @@ app.use(express.static(path.join(__dirname, 'public')));
 //   .then(() => console.log('MongoDB connected'))
 //   .catch(err => console.error('MongoDB connection error:', err));
 
-
 app.get('/',(req,res)=>{
   res.render('home');
-})
-
-app.get('/dashboard',(req,res)=>{
-  res.render('dashboard');
 });
 
-app.get('/create_new_project',(req,res)=>{
-  res.render('create_new_project');
-});
 
-app.get('/profile',(req,res)=>{
-  res.render('profile');
-});
+const dashboardRoutes = require('./routes/dashboard'); 
+const createnewprojectRoutes = require('./routes/create_new_project'); 
+const editprofileRoutes = require('./routes/edit_profile');
+const hackathonRoutes = require('./routes/hackathon');
+const profileRoutes = require('./routes/profile');
+const pasthackathonRoutes = require('./routes/past_hackathon');
 
-app.get('/edit_profile',(req,res)=>{
-  res.render('edit_profile');
-});
 
-app.get('/hackathon',(req,res)=>{
-  res.render('hackathon');
-});
-
-app.get('/past_hackathon',(req,res)=>{
-  res.render('past_hackathon');
-});
-
+app.use('/dashboard',dashboardRoutes);
+app.use('/create_new_project',createnewprojectRoutes);
+app.use('/edit_profile',editprofileRoutes);
+app.use('/hackathon',hackathonRoutes);
+app.use('/profile',profileRoutes);
+app.use('/past_hackathon',pasthackathonRoutes);
 
 
 app.listen(port,()=>{

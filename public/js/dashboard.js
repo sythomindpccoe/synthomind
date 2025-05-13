@@ -175,3 +175,14 @@ document.getElementById('Past_Hackathons').addEventListener('click', () => {
     window.location.href = '/past_hackathon';
 });
 
+
+document.getElementById('dashboard').addEventListener('click',()=>{
+    window.location.href = '/dashboard';
+});
+
+
+document.getElementById('recent_documents').addEventListener('click', () => {
+    window.location.href = '/hackathon';
+});
+
+

@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Edit profile button
     editProfileBtn.addEventListener('click', function() {
         // In a real app, this would navigate to the edit profile page
-        window.location.href = 'edit-profile.html';
+        window.location.href = '/edit_profile';
     });
     
     // Logout button
@@ -128,3 +128,21 @@ document.addEventListener('DOMContentLoaded', function() {
         links.style.transition = 'all 0.3s ease';
     });
 });
+
+
+document.getElementById('dashboard').addEventListener('click',()=>{
+    window.location.href = '/dashboard';
+});
+
+document.getElementById('hackathon').addEventListener('click',()=>{
+    window.location.href = '/hackathon';
+});
+
+document.getElementById('past_hackathon').addEventListener('click',()=>{
+    window.location.href = '/past_hackathon';
+});
+
+document.getElementById('profile').addEventListener('click',()=>{
+    window.location.href = '/profile';
+});
+
