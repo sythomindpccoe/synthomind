@@ -1,19 +1,16 @@
 
 const express = require('express');
-const mongoose = require('mongoose');
 require('dotenv').config();
 const path = require('path');
 const app = express();
+const connectDB = require('./database/db');
+connectDB();
 
 const port = process.env.PORT
 
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-
-// mongoose.connect(process.env.MONGODB_URI)
-//   .then(() => console.log('MongoDB connected'))
-//   .catch(err => console.error('MongoDB connection error:', err));
 
 app.get('/',(req,res)=>{
   res.render('home');
