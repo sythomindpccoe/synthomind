@@ -17,7 +17,8 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
     
 document.getElementById('login').addEventListener('click',()=>{
-    window.location.href = '/dashboard';
+    window.location.href = '/login_page';
 })

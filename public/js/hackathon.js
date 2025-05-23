@@ -152,3 +152,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+document.getElementById('dashboard').addEventListener('click',()=>{
+    window.location.href = '/dashboard';
+});
+
+document.getElementById('hackathon').addEventListener('click',()=>{
+    window.location.href = '/hackathon';
+});
+
+document.getElementById('past_hackathon').addEventListener('click',()=>{
+    window.location.href = '/past_hackathon';
+});
+
+document.getElementById('profile').addEventListener('click',()=>{
+    window.location.href = '/profile';
+});
+

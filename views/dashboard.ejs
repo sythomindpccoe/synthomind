@@ -13,11 +13,11 @@
     <header>
         <nav>
             <a class="logo">Syntho<span>Mind</span></a>
-             <ul class="nav-links">
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/hackathon">Current Hackathon</a></li>
-                <li><a href="/previous-hackathons">Past Hackathons</a></li>
-                <li><a href="/profile" class="active">Profile</a></li>
+            <ul class="nav-links">
+                <li><a id="dashboard" class="active">Dashboard</a></li>
+                <li><a id="Current_Hackathon">Current Hackathon</a></li>
+                <li><a id="Past_Hackathons">Past Hackathons</a></li>
+                <li><a id="profile">Profile</a></li>
             </ul>
             <button class="login-btn" id="logout-btn">Logout</button>
         </nav>
@@ -28,7 +28,7 @@
         <!-- Welcome Section -->
         <section class="welcome-section">
             <div class="welcome-content">
-                <h1>Welcome back, <span id="username">Alex</span>!</h1>
+                <h1>Hi, <span id="username"><%= member.name%></span>!</h1>
                 <p>Here's what's happening with your team today.</p>
                 <div class="current-hackathon">
                     <h3>Current Hackathon: <span>Tech Innovators 2023</span></h3>
@@ -238,7 +238,7 @@
             <section class="dashboard-card documents-card">
                 <div class="card-header">
                     <h2><i class="fas fa-file-alt"></i> Recent Documents</h2>
-                    <a href="hackathon.html" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+                    <a id="recent_documents" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="card-content">
                     <div class="documents-list">

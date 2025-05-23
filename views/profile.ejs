@@ -1,5 +1,5 @@
-<!DOCTYPE>
- lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +12,12 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="/dashboard" class="logo">Syntho<span>Mind</span></a>
+            <a href="dashboard.html" class="logo">Syntho<span>Mind</span></a>
             <ul class="nav-links">
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/hackathon">Current Hackathon</a></li>
-                <li><a href="/previous-hackathons">Past Hackathons</a></li>
-                <li><a href="/profile" class="active">Profile</a></li>
+                <li><a id="dashboard">Dashboard</a></li>
+                <li><a id="hackathon" class="active">Current Hackathon</a></li>
+                <li><a id="past_hackathon">Past Hackathons</a></li>
+                <li><a id="profile">Profile</a></li>
             </ul>
             <button class="login-btn" id="logout-btn">Logout</button>
         </nav>
@@ -34,9 +34,8 @@
                 </button>
             </div>
             <div class="profile-info">
-                <h1>Alex Morgan</h1>
+                <h1><%=member.name%></h1>
                 <p class="profile-title">Team Lead & Full Stack Developer</p>
-                <p class="profile-location"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
                 
                 <div class="profile-stats">
                     <div class="stat-item">
@@ -58,10 +57,10 @@
                         <i class="fas fa-user-edit"></i> Edit Profile
                     </button>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+                        <a href= <%=member.Github_link%> class="social-link"><i class="fab fa-github"></i></a>
+                        <a href=<%=member.likedin%> class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href=<%= member.Instagram %> class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href=<%=member.Website%> class="social-link"><i class="fas fa-globe"></i></a>
                     </div>
                 </div>
             </div>
@@ -80,7 +79,7 @@
             <section class="profile-section">
                 <h2><i class="fas fa-user"></i> Bio</h2>
                 <div class="section-content">
-                    <p>Passionate full-stack developer with 5 years of experience in building web applications. Specialized in JavaScript frameworks and cloud architecture. Love participating in hackathons and solving real-world problems with technology.</p>
+                    <p><%=member.Bio%></p>
                 </div>
             </section>
 
@@ -478,4 +477,4 @@
 
     <script src="/js/profile.js"></script>
 </body>
-<>
+</html>
